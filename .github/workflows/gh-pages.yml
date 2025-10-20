@@ -11,11 +11,29 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (startsWith(github.ref, 'refs/heads/') == true)
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: true
+      - name: Check deploy toggle
+        id: deploy-toggle
+        run: |
+          if [ -f .deploy ]; then
+            val=$(cat .deploy | tr -d '\r\n' | tr '[:upper:]' '[:lower:]')
+            echo "deploy_toggle=$val" >> $GITHUB_OUTPUT
+          else
+            echo "deploy_toggle=on" >> $GITHUB_OUTPUT
+          fi
+      - name: Stop if deploy toggle is off
+        if: steps.deploy-toggle.outputs.deploy_toggle == 'off'
+        run: |
+          echo "Deployment is turned off (.deploy contains 'off'). Exiting.";
+          exit 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
