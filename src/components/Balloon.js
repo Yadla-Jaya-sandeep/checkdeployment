@@ -1,4 +1,4 @@
-import React ,{useEffect, useState} from "react";
+import React from "react";
 import "./Balloon.css";
 
 export default function Balloon({ id, onBlast }) {
