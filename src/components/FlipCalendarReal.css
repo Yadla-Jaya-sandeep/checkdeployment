@@ -1,0 +1,203 @@
+/* .fllip-calendar-real{
+  perspective: 1000px;
+  width: 350px;
+  height: 280px;
+  margin: 40px auto;
+  user-select: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.full-calendar {
+  width: 350px;
+  margin: 30px auto;
+}
+ 
+.month-title {
+  text-align: center;
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #6a1b9a;
+}
+ 
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: white;
+  font-weight: 600;
+}
+ 
+.calendar-table th,
+.calendar-table td {
+  padding: 6px 0;
+  text-align: center;
+}
+ 
+.date-cell {
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  height: 35px;
+}
+ 
+.birthday-cell {
+  background-color: #e91e63;
+  font-size: 1.3rem;
+  box-shadow: 0 0 12px 2px #f48fb1;
+  font-weight: 900;
+}
+ 
+.love-symbol {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.3rem;
+}
+  */
+
+
+  .flip-calendar-real {
+  perspective: 1000px;
+  width: 350px;
+  
+  height: 280px;
+  margin: 40px auto;
+  user-select: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.full-calendar {
+  width: 350px;
+  margin: 30px auto;
+}
+ 
+.month-title {
+  text-align: center;
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #6a1b9a;
+}
+ 
+.flip-card-real {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease-in-out;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+  background-color: #6a1b9a;
+  padding: 10px;
+  box-sizing: border-box;
+}
+ 
+.flip-card-real.flipped {
+  transform: rotateY(180deg);
+}
+ 
+.flip-front-real, .flip-back-real {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 5px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  overflow: visible;
+  color: white;
+}
+ 
+.flip-back-real {
+  background: linear-gradient(135deg, #ab47bc, #8e24aa);
+  transform: rotateY(180deg);
+}
+ 
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  font-weight: 600;
+}
+ 
+.calendar-table th{
+  padding: 6px 0;
+  text-align: center;
+  border: none;
+  width: 14.28%;
+  height: 2px;
+  vertical-align: middle;
+
+}
+.calendar-table td {
+  padding: 3px 0;
+  text-align: center;
+  border: none;
+  width: 14.28%;
+  height: 10px;
+  vertical-align: middle;
+}
+ 
+/* .date-cell {
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+} */
+ 
+/* .birthday-cell {
+  background-color: #e91e63;
+  box-shadow: 0 0 12px 2px #f48fb1;
+  font-weight: 900;
+  font-size: 1.3rem;
+} */
+ 
+.love-symbol {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+  width:50px;
+  height: 30px;
+  gap: 5px;
+  font-size: 2.2rem;
+}
+ 
+/* .love-symbol {
+  position: relative;
+  display: inline-block;
+  width:30px;
+  height:30px;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.8rem;
+  color: #e91e63;
+} */
+.heart-shape{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  pointer-events: none;
+}
+.heart-date{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-weight: 900;
+  font-size: 1rem;
+  color: white;
+  pointer-events: none;
+  user-select: none;
+  font-family: Arial, sans-serif;
+}
+ 
