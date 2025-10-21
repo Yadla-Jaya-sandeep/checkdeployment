@@ -18,6 +18,23 @@ const balloonCelebrations = [
   { message: "You are special!", emoji: "🌹" },
   { message: "Dream big!", emoji: "🌟" },
   { message: "Hugs!", emoji: "🤍" },
+  { message: "Brave and bold!", emoji: "🦁" },
+  { message: "Keep being kind!", emoji: "🌼" },
+  { message: "You’ve got this!", emoji: "💪" },
+  { message: "Stay curious!", emoji: "🔭" },
+  { message: "Smile more!", emoji: "😊" },
+  { message: "Keep learning!", emoji: "📚" },
+  { message: "Radiate love!", emoji: "💞" },
+  { message: "Be unstoppable!", emoji: "🚀" },
+  { message: "Cherish every moment!", emoji: "⏳" },
+  { message: "You inspire me!", emoji: "✨" },
+  { message: "Kind heart wins!", emoji: "💛" },
+  { message: "Magic within you!", emoji: "🪄" },
+  { message: "Keep the faith!", emoji: "🕊️" },
+  { message: "Live fearlessly!", emoji: "🔥" },
+  { message: "Celebrate you!", emoji: "🥳" },
+  { message: "Always be you!", emoji: "🌈" },
+  { message: "Love yourself first!", emoji: "💗" },
 ];
 
 function App() {
@@ -490,14 +507,32 @@ function App() {
             ) : (
               <>
                 <Typography
-                  variant="h4"
-                  color="#880e4f"
-                  sx={{ fontWeight: "bold", textAlign: "center", mb: 1 }}
+                  variant="h5"
+                  color="#1cd738ff"
+                  sx={{
+                    fontWeight: "600",
+                    textAlign: "center",
+                    mb: 1,
+                    maxWidth: 720,
+                    fontSize: { xs: '0.95rem', sm: '1rem', md: '1.05rem' },
+                    lineHeight: 1.45,
+                    mx: 'auto',
+                    whiteSpace: 'normal',
+                  }}
                 >
-                  All balloons blasted! Special wishes just for you ❤️
+                  Happy Birthday to my favourite Human ❤️
+                  <br />
+                  You've walked through storms with quiet strength,
+                  carried light even on your darkest days, and never stopped
+                  believing in the beauty of tomorrow. Your kindness, resilience,
+                  and unwavering spirit inspire me every day. May this year
+                  bring you calm mornings, gentle nights, and people who make you feel safe to be your true self.
+                  You're growing beautifully, at your own pace, in your own time.
+                  Keep shining, keep dreaming, and keep being the incredible person you are.
+                  Never forget, you are rare, you are valued, and you are deeply loved more than you'll ever know. 💖😉
                 </Typography>
                 <Typography variant="h5" color="#880e4f" sx={{ mb: 1 }}>
-                  Happy Birthday, ! 💖
+                  Happy Birthday, Potti Budamkayee! 💖
                 </Typography>
                 {calendarMonth < birthdayMonthIndex && dateValid && (
                   <Confetti
@@ -527,7 +562,6 @@ function App() {
                   currentMonth={calendarMonth}
                   setCurrentMonth={setCalendarMonth}
                   style={{
-                    // backgroundImage: `url(${friendImage})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     borderRadius: 18,
@@ -535,8 +569,11 @@ function App() {
                     backdropFilter: "blur(8px)",
                     border: "2px solid #fff",
                     overflow: "hidden",
-                    minHeight: 220,
-                    minWidth: 320,
+                    minHeight: 200,
+                    minWidth: 280,
+                    width: '100%',
+                    maxWidth: 420,
+                    marginTop: 12,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
