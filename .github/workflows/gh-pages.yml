@@ -23,12 +23,15 @@ jobs:
       - name: Check deploy toggle
         id: deploy-toggle
         run: |
+          # Check for .deploy at repo root first, then in the `birth/` folder.
           if [ -f .deploy ]; then
             val=$(cat .deploy | tr -d '\r\n' | tr '[:upper:]' '[:lower:]')
-            echo "deploy_toggle=$val" >> $GITHUB_OUTPUT
+          elif [ -f birth/.deploy ]; then
+            val=$(cat birth/.deploy | tr -d '\r\n' | tr '[:upper:]' '[:lower:]')
           else
-            echo "deploy_toggle=on" >> $GITHUB_OUTPUT
+            val=on
           fi
+          echo "deploy_toggle=$val" >> $GITHUB_OUTPUT
       - name: Stop if deploy toggle is off
         if: steps.deploy-toggle.outputs.deploy_toggle == 'off'
         run: |
